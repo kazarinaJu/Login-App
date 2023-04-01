@@ -104,11 +104,8 @@
                                     <segue destination="F6B-vo-L8G" kind="unwind" unwindAction="unwindFor:" id="hVo-ZD-71P"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CLp-8M-xUQ">
-                                <rect key="frame" x="119" y="295" width="82" height="67.5"/>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <nil key="image"/>
-                                </variation>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hands.sparkles.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CLp-8M-xUQ">
+                                <rect key="frame" x="119" y="292" width="82" height="72"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Yd-lK-onC">
                                 <rect key="frame" x="82" y="200" width="156" height="26.5"/>
@@ -153,6 +150,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="hands.sparkles.fill" catalog="system" width="126" height="128"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
