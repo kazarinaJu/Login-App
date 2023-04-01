@@ -38,6 +38,9 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" systemColor="systemBlueColor"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="UwE-kJ-JoR" kind="presentation" modalPresentationStyle="fullScreen" id="w4g-VO-xSQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -81,7 +84,55 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1488" y="-788"/>
+            <point key="canvasLocation" x="-2097" y="-915"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="CZE-LZ-8Xc">
+            <objects>
+                <viewController id="UwE-kJ-JoR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yTs-ud-Suh">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, " textAlignment="center" lineBreakMode="headTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cu9-72-Lav">
+                                <rect key="frame" x="148" y="259" width="99" height="26.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.86787210051546393" green="0.18627366798666195" blue="0.68872654466642991" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvs-WQ-1NV">
+                                <rect key="frame" x="156.66666666666666" y="573.66666666666663" width="80" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="showUserPassword" destination="BYZ-38-t0r" eventType="touchUpInside" id="NCL-Hv-3un"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CLp-8M-xUQ">
+                                <rect key="frame" x="146" y="354" width="101" height="101"/>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <nil key="image"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lJ6-Uu-gdR"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lJ6-Uu-gdR" firstAttribute="bottom" secondItem="uvs-WQ-1NV" secondAttribute="bottom" multiplier="4:3" id="827-zP-SCg"/>
+                            <constraint firstItem="Cu9-72-Lav" firstAttribute="centerX" secondItem="yTs-ud-Suh" secondAttribute="centerX" constant="1" id="A36-NP-asL"/>
+                            <constraint firstItem="uvs-WQ-1NV" firstAttribute="centerX" secondItem="yTs-ud-Suh" secondAttribute="centerX" id="HfA-Jl-98F"/>
+                            <constraint firstItem="CLp-8M-xUQ" firstAttribute="width" secondItem="yTs-ud-Suh" secondAttribute="width" multiplier="0.256997" id="I6J-nH-eJe"/>
+                            <constraint firstItem="CLp-8M-xUQ" firstAttribute="top" secondItem="Cu9-72-Lav" secondAttribute="bottom" constant="68.666666666666686" id="Mmb-Cj-NAL"/>
+                            <constraint firstItem="Cu9-72-Lav" firstAttribute="top" secondItem="lJ6-Uu-gdR" secondAttribute="top" constant="200" id="RZ9-jp-mQQ"/>
+                            <constraint firstItem="CLp-8M-xUQ" firstAttribute="centerX" secondItem="yTs-ud-Suh" secondAttribute="centerX" id="WLm-Jk-V9N"/>
+                            <constraint firstItem="CLp-8M-xUQ" firstAttribute="height" secondItem="yTs-ud-Suh" secondAttribute="height" multiplier="0.118545" id="fXd-Vt-pNC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYY-A2-fKD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1379.3893129770993" y="-915.49295774647896"/>
         </scene>
     </scenes>
     <resources>
