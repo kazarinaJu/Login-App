@@ -15,7 +15,7 @@ final class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        logInButton.layer.cornerRadius = 10
+        logInButton.layer.cornerRadius = 5
     }
     
     @IBAction func showUserName() {
