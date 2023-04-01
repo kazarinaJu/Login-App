@@ -19,15 +19,18 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTF.text
+        if isValidLogin() {
+            guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+            welcomeVC.userName = userNameTF.text
+        } else {
+            showAlert(withTitle: "Oops!", andMessage: "Username or password is wrong")
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
     }
-
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
         userNameTF.text = ""
@@ -44,9 +47,17 @@ final class LoginViewController: UIViewController {
     
     private func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.userPasswordTF.text = ""
+        }
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    private func isValidLogin() -> Bool {
+        let username = "User"
+        let password = "1111"
+        return userNameTF.text == username && userPasswordTF.text == password
     }
     
 }
