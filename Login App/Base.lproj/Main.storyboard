@@ -105,10 +105,10 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hands.sparkles.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CLp-8M-xUQ">
-                                <rect key="frame" x="119" y="292" width="82" height="72"/>
+                                <rect key="frame" x="119" y="272" width="82" height="72"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6Yd-lK-onC">
-                                <rect key="frame" x="82" y="200" width="156" height="26.5"/>
+                                <rect key="frame" x="82" y="180" width="156" height="26.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, " textAlignment="right" lineBreakMode="headTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cu9-72-Lav">
                                         <rect key="frame" x="0.0" y="0.0" width="99" height="26.5"/>
@@ -129,7 +129,7 @@
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lJ6-Uu-gdR" firstAttribute="bottom" secondItem="uvs-WQ-1NV" secondAttribute="bottom" multiplier="4:3" id="827-zP-SCg"/>
-                            <constraint firstItem="6Yd-lK-onC" firstAttribute="top" secondItem="lJ6-Uu-gdR" secondAttribute="top" constant="200" id="Dc0-fi-Avd"/>
+                            <constraint firstItem="6Yd-lK-onC" firstAttribute="top" secondItem="lJ6-Uu-gdR" secondAttribute="top" constant="180" id="Dc0-fi-Avd"/>
                             <constraint firstItem="uvs-WQ-1NV" firstAttribute="centerX" secondItem="yTs-ud-Suh" secondAttribute="centerX" id="HfA-Jl-98F"/>
                             <constraint firstItem="CLp-8M-xUQ" firstAttribute="width" secondItem="yTs-ud-Suh" secondAttribute="width" multiplier="0.256997" id="I6J-nH-eJe"/>
                             <constraint firstItem="6Yd-lK-onC" firstAttribute="centerX" secondItem="yTs-ud-Suh" secondAttribute="centerX" id="V6M-TQ-UKL"/>
