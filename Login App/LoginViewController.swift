@@ -18,6 +18,22 @@ final class LoginViewController: UIViewController {
         logInButton.layer.cornerRadius = 5
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.userName = userNameTF.text
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
+    }
+
+    
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameTF.text = ""
+        userPasswordTF.text = ""
+    }
+    
     @IBAction func showUserName() {
         showAlert(withTitle: "Oops!", andMessage: "Your name is User")
     }
