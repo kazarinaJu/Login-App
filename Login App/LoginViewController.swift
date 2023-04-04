@@ -19,17 +19,24 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if isValidLogin() {
-            guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-            welcomeVC.userName = userNameTF.text
-        } else {
-            showAlert(withTitle: "Oops!", andMessage: "Username or password is wrong")
-        }
+        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+        welcomeVC.userName = userNameTF.text
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        self.view.endEditing(true)
+        view.endEditing(true)
+    }
+    
+    @IBAction func loginPressed() {
+        guard isValidLogin() else {
+            showAlert(
+                withTitle: "Invalid login or password",
+                andMessage: "Please, enter correct login and password"
+            )
+            return
+        }
+        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -37,12 +44,10 @@ final class LoginViewController: UIViewController {
         userPasswordTF.text = ""
     }
     
-    @IBAction func showUserName() {
-        showAlert(withTitle: "Oops!", andMessage: "Your name is User")
-    }
-    
-    @IBAction func showUserPassword() {
-        showAlert(withTitle: "Oops!", andMessage: "Your password is 1111")
+    @IBAction func forgotRegisterData(_ sender: UIButton) {
+        sender.tag == 0
+        ? showAlert(withTitle: "Oops!", andMessage: "Your name is User 😉")
+        : showAlert(withTitle: "Oops!", andMessage: "Your password is 1111 😉")
     }
     
     private func showAlert(withTitle title: String, andMessage message: String) {
@@ -59,6 +64,5 @@ final class LoginViewController: UIViewController {
         let password = "1111"
         return userNameTF.text == username && userPasswordTF.text == password
     }
-    
 }
 

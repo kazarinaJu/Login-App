@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
+final class WelcomeViewController: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
     @IBOutlet var userNameLabel: UILabel!
@@ -21,9 +21,4 @@ class WelcomeViewController: UIViewController {
         userNameLabel.text = userName
         userNameLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 22.0)
     }
-    
-    @IBAction func logOutButtonTapped() {
-        dismiss(animated: true)
-    }
-    
 }
