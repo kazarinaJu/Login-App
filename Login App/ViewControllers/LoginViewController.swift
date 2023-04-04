@@ -13,6 +13,9 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userPasswordTF: UITextField!
     @IBOutlet var logInButton: UIButton!
     
+    private let user = "User"
+    private let password = "1111"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         logInButton.layer.cornerRadius = 5
@@ -20,7 +23,7 @@ final class LoginViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userName = userNameTF.text
+        welcomeVC.user = user
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -60,8 +63,8 @@ final class LoginViewController: UIViewController {
     }
     
     private func isValidLogin() -> Bool {
-        let username = "User"
-        let password = "1111"
+        let username = user
+        let password = password
         return userNameTF.text == username && userPasswordTF.text == password
     }
 }

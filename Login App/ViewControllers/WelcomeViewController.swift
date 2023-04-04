@@ -10,15 +10,12 @@ import UIKit
 final class WelcomeViewController: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
-    @IBOutlet var userNameLabel: UILabel!
     
-    var userName: String!
+    var user = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         welcomeLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 22.0)
-        
-        userNameLabel.text = userName
-        userNameLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 22.0)
+        welcomeLabel.text = "Welcome, \(user)"
     }
 }
