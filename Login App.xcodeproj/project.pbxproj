@@ -16,6 +16,7 @@
 		052A1E2629DC568100063470 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052A1E2529DC568100063470 /* User.swift */; };
 		052A1E2929DD5FE200063470 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052A1E2829DD5FE200063470 /* UserViewController.swift */; };
 		052A1E2B29DD60CC00063470 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052A1E2A29DD60CC00063470 /* TabBarViewController.swift */; };
+		052A1E2D29DD76CD00063470 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 052A1E2C29DD76CD00063470 /* BioViewController.swift */; };
 		05B281DE29D869FC004B5ABD /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B281DD29D869FC004B5ABD /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		052A1E2529DC568100063470 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		052A1E2829DD5FE200063470 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		052A1E2A29DD60CC00063470 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		052A1E2C29DD76CD00063470 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		05B281DD29D869FC004B5ABD /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 				052A1E2A29DD60CC00063470 /* TabBarViewController.swift */,
 				05B281DD29D869FC004B5ABD /* WelcomeViewController.swift */,
 				052A1E2829DD5FE200063470 /* UserViewController.swift */,
+				052A1E2C29DD76CD00063470 /* BioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 				0528EAC529D7284F00EA95B3 /* LoginViewController.swift in Sources */,
 				052A1E2929DD5FE200063470 /* UserViewController.swift in Sources */,
 				05B281DE29D869FC004B5ABD /* WelcomeViewController.swift in Sources */,
+				052A1E2D29DD76CD00063470 /* BioViewController.swift in Sources */,
 				0528EAC129D7284F00EA95B3 /* AppDelegate.swift in Sources */,
 				052A1E2B29DD60CC00063470 /* TabBarViewController.swift in Sources */,
 				052A1E2629DC568100063470 /* User.swift in Sources */,

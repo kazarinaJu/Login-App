@@ -241,7 +241,7 @@
                     <navigationItem key="navigationItem" title="Title" id="I3J-6M-bXW">
                         <barButtonItem key="rightBarButtonItem" title="Bio" id="O9W-O2-uO9">
                             <connections>
-                                <segue destination="ciG-U1-rkX" kind="show" id="TVl-am-xYC"/>
+                                <segue destination="ciG-U1-rkX" kind="show" id="j3T-23-Oo7"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -257,16 +257,16 @@
             </objects>
             <point key="canvasLocation" x="-924.375" y="-383.45070422535213"/>
         </scene>
-        <!--View Controller-->
+        <!--Bio View Controller-->
         <scene sceneID="sde-eb-8J9">
             <objects>
-                <viewController id="ciG-U1-rkX" sceneMemberID="viewController">
+                <viewController id="ciG-U1-rkX" customClass="BioViewController" customModule="Login_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="78o-Z2-u0c">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Jha-iZ-F2l">
-                                <rect key="frame" x="16" y="44" width="288" height="55"/>
+                                <rect key="frame" x="16" y="44" width="288" height="49"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label Bio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FUU-AA-wJ5">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="26.5"/>
@@ -274,9 +274,9 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y9-Ae-YgR">
-                                        <rect key="frame" x="0.0" y="34.5" width="288" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="100" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2y9-Ae-YgR">
+                                        <rect key="frame" x="0.0" y="34.5" width="288" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -292,6 +292,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="Tk9-EZ-i0n"/>
+                    <connections>
+                        <outlet property="aboutWhomLabel" destination="FUU-AA-wJ5" id="7GI-km-YW8"/>
+                        <outlet property="bioLabel" destination="2y9-Ae-YgR" id="2T8-pd-r8B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lyD-Pj-PVN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -323,7 +327,7 @@
                     <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="UeS-G6-GRW"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="oKI-QR-h3X">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="98.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
