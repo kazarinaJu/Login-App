@@ -27,6 +27,11 @@ final class UserViewController: UIViewController {
         companyLabel.attributedText = makeItalic(string: user.person.companyName)
         jobTitleLabel.attributedText = makeItalic(string: user.person.jobTitle)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let bioVC = segue.destination as? BioViewController else { return }
+        bioVC.user = user
+    }
 }
 
 extension UserViewController {
