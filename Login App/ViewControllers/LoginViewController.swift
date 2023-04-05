@@ -13,17 +13,28 @@ final class LoginViewController: UIViewController {
     @IBOutlet var userPasswordTF: UITextField!
     @IBOutlet var logInButton: UIButton!
     
-    private let user = "User"
-    private let password = "1111"
+   private let user = User.getUser()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         logInButton.layer.cornerRadius = 5
+        userNameTF.text = user.userName
+        userPasswordTF.text = user.userPassword
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.user = user
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                guard let userVC = navigationVC.topViewController as? UserViewController else { return }
+                userVC.user = user
+                userVC.title = "\(user.person.name) \(user.person.surname)"
+            }
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -49,8 +60,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(withTitle: "Oops!", andMessage: "Your name is User 😉")
-        : showAlert(withTitle: "Oops!", andMessage: "Your password is 1111 😉")
+        ? showAlert(withTitle: "Oops!", andMessage: "Your name is \(user.userName) 😉")
+        : showAlert(withTitle: "Oops!", andMessage: "Your password is \(user.userPassword) 😉")
     }
     
     private func showAlert(withTitle title: String, andMessage message: String) {
@@ -63,8 +74,8 @@ final class LoginViewController: UIViewController {
     }
     
     private func isValidLogin() -> Bool {
-        let username = user
-        let password = password
+        let username = user.userName
+        let password = user.userPassword
         return userNameTF.text == username && userPasswordTF.text == password
     }
 }
