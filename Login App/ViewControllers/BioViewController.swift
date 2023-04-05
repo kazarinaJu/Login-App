@@ -8,14 +8,15 @@
 import UIKit
 
 final class BioViewController: UIViewController {
-
-    var user: User!
     
     @IBOutlet var aboutWhomLabel: UILabel!
     @IBOutlet var bioLabel: UILabel!
     
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         aboutWhomLabel.text = "\(user.person.name) \(user.person.surname) Bio"
         bioLabel.text = user.person.biography
     }
