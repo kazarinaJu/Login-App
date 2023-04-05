@@ -18,6 +18,8 @@ final class UserViewController: UIViewController {
     
     var user: User!
     
+   
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
